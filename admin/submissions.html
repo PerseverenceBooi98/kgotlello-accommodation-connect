@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landlord Applications | Kgotlello Admin</title>
+    <link rel="stylesheet" href="../assets/css/admin.css">
+</head>
+<body class="admin-page">
+
+<aside class="admin-sidebar">
+    <div class="sidebar-brand">
+        <div class="brand-mark">K</div>
+        <div><strong>Kgotlello</strong><small>Administration</small></div>
+    </div>
+
+    <nav class="admin-nav">
+        <a href="dashboard.html">▦ Dashboard</a>
+        <a href="submissions.html" class="active">▤ Landlord Applications</a>
+        <a href="properties.html">⌂ Property Listings</a>
+        <a href="enquiries.html">✉ Tenant Enquiries</a>
+        <a href="referrals.html">R Referral Tracking</a>
+        <a href="../index.html" target="_blank">↗ View Website</a>
+    </nav>
+
+    <button id="logoutButton" class="logout-button">Sign Out</button>
+</aside>
+
+<main class="admin-main">
+    <header class="admin-topbar">
+        <div>
+            <span class="eyebrow">PROPERTY MANAGEMENT</span>
+            <h1>Landlord Applications</h1>
+            <p>Review and manage property submissions from landlords.</p>
+        </div>
+        <div class="admin-user">
+            <div class="user-avatar">K</div>
+            <div><strong>Administrator</strong><small id="adminEmail">Loading...</small></div>
+        </div>
+    </header>
+
+    <section class="application-summary">
+        <div><span>All applications</span><strong id="allCount">—</strong></div>
+        <div><span>Pending</span><strong id="pendingCount">—</strong></div>
+        <div><span>Under review</span><strong id="reviewCount">—</strong></div>
+        <div><span>Approved</span><strong id="approvedCount">—</strong></div>
+        <div><span>Rejected</span><strong id="rejectedCount">—</strong></div>
+    </section>
+
+    <section class="application-panel">
+        <div class="application-toolbar">
+            <div>
+                <h2>Submitted applications</h2>
+                <p>Review landlord information and property details.</p>
+            </div>
+            <button id="refreshApplications" class="secondary-button">↻ Refresh</button>
+        </div>
+
+        <div class="application-filters">
+            <input type="search" id="applicationSearch"
+                   placeholder="Search landlord, property or area...">
+
+            <select id="statusFilter">
+                <option value="">All statuses</option>
+                <option value="pending">Pending</option>
+                <option value="under_review">Under review</option>
+                <option value="approved">Approved</option>
+                <option value="rejected">Rejected</option>
+            </select>
+        </div>
+
+        <div class="table-responsive">
+            <table class="applications-table">
+                <thead>
+                    <tr>
+                        <th>Property / Landlord</th>
+                        <th>Area</th>
+                        <th>Monthly rent</th>
+                        <th>Date submitted</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="applicationsTableBody">
+                    <tr><td colspan="6">Loading applications...</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div id="applicationMessage" class="dashboard-message"></div>
+    </section>
+
+    <footer class="admin-footer">
+        Kgotlello Accommodation Connect · Administration Portal · 2026
+    </footer>
+</main>
+
+<div id="applicationModal" class="application-modal" hidden>
+    <div class="application-modal-card">
+        <div class="modal-heading">
+            <div>
+                <span class="eyebrow">APPLICATION DETAILS</span>
+                <h2 id="modalPropertyTitle">Property application</h2>
+            </div>
+            <button id="closeApplicationModal" class="modal-close" aria-label="Close">×</button>
+        </div>
+
+        <div id="applicationDetails" class="application-details"></div>
+
+        <div class="modal-actions">
+            <button id="markReviewButton" class="secondary-button">Mark under review</button>
+            <button id="rejectApplicationButton" class="danger-button">Reject application</button>
+        </div>
+
+        <p id="modalMessage" class="dashboard-message"></p>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="../assets/js/supabase.js"></script>
+<script src="../assets/js/admin.js"></script>
+</body>
+</html>

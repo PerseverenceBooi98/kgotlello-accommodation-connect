@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login | Kgotlello Accommodation Connect</title>
+    <link rel="stylesheet" href="../assets/css/admin.css">
+</head>
+<body class="login-page">
+
+    <main class="login-wrapper">
+        <section class="login-brand">
+            <div class="brand-mark">K</div>
+            <h1>Kgotlello</h1>
+            <p>Accommodation Connect</p>
+            <span>ADMINISTRATION PORTAL</span>
+        </section>
+
+        <section class="login-card">
+            <h2>Administrator Login</h2>
+            <p class="login-subtitle">Sign in to manage properties and enquiries.</p>
+
+            <form id="adminLoginForm">
+                <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input type="email" id="email" required
+                           placeholder="Enter your admin email">
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" required
+                           placeholder="Enter your password">
+                </div>
+
+                <button type="submit" id="loginButton">
+                    Sign In
+                </button>
+
+                <div id="loginMessage" role="alert"></div>
+            </form>
+
+            <a href="../index.html" class="back-link">
+                ← Back to website
+            </a>
+        </section>
+
+        <footer>© 2026 Kgotlello Accommodation Connect</footer>
+    </main>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="../assets/js/supabase.js"></script>
+<script src="../assets/js/auth.js"></script>
+</body>
+</html>

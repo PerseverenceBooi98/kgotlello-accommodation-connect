@@ -1,0 +1,247 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#123D32">
+
+    <title>Contact Us | Kgotlello Accommodation Connect</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/contact.css">
+</head>
+
+<body>
+
+<header class="site-header">
+    <div class="container header-inner">
+
+        <a href="index.html" class="brand">
+            <span class="brand-mark">K</span>
+            <span class="brand-name">
+                Kgotlello
+                <small>Accommodation Connect</small>
+            </span>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="main-nav" id="mainNav">
+            <a href="index.html">Home</a>
+            <a href="accommodation.html">Find Accommodation</a>
+            <a href="how-it-works.html">How It Works</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html" class="active">Contact</a>
+            <a href="list-property.html" class="nav-cta">List Your Property</a>
+        </nav>
+
+    </div>
+</header>
+
+<main>
+
+    <!-- INTRO -->
+    <section class="contact-hero">
+        <div class="container">
+            <span class="section-eyebrow">Get in touch</span>
+
+            <h1>We're here to <span>help you connect.</span></h1>
+
+            <p>
+                Have a question about accommodation, listing a property
+                or using Kgotlello? Send us a message and we'll help
+                you with the next step.
+            </p>
+        </div>
+    </section>
+
+    <!-- CONTACT CONTENT -->
+    <section class="contact-section">
+        <div class="container contact-layout">
+
+            <!-- CONTACT INFORMATION -->
+            <div class="contact-information">
+
+                <span class="section-eyebrow">Contact information</span>
+                <h2>Let's talk.</h2>
+
+                <p class="contact-intro">
+                    Whether you're searching for a place to rent or
+                    looking to list accommodation, you can contact
+                    us with your enquiry.
+                </p>
+
+                <div class="contact-detail">
+                    <div class="contact-detail-icon">⌖</div>
+                    <div>
+                        <h3>Service area</h3>
+                        <p>Mahikeng and nearby communities, North West, South Africa.</p>
+                    </div>
+                </div>
+
+                <div class="contact-detail">
+                    <div class="contact-detail-icon">✉</div>
+                    <div>
+                        <h3>Email</h3>
+                        <p>Our official email address will be published here.</p>
+                    </div>
+                </div>
+
+                <div class="contact-detail">
+                    <div class="contact-detail-icon">☎</div>
+                    <div>
+                        <h3>Phone / WhatsApp</h3>
+                        <p>Our official contact number will be published here.</p>
+                    </div>
+                </div>
+
+                <div class="contact-note">
+                    <strong>Important</strong>
+                    <p>
+                        Kgotlello is an accommodation connection platform.
+                        Always verify property details and rental arrangements
+                        directly before making payments or signing agreements.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- CONTACT FORM -->
+            <div class="contact-form-card">
+
+                <div class="contact-form-heading">
+                    <span class="section-eyebrow">Send an enquiry</span>
+                    <h2>How can we assist?</h2>
+                    <p>Complete the details below to prepare your message.</p>
+                </div>
+
+                <form id="contactForm">
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+                            <label for="contactName">Full name</label>
+                            <input type="text" id="contactName"
+                                placeholder="Your full name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contactPhone">Contact number</label>
+                            <input type="tel" id="contactPhone"
+                                placeholder="e.g. 071 234 5678" required>
+                        </div>
+
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contactEmail">Email address (optional)</label>
+                        <input type="email" id="contactEmail"
+                            placeholder="you@example.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contactSubject">What is your enquiry about?</label>
+
+                        <select id="contactSubject" required>
+                            <option value="">Select an enquiry type</option>
+                            <option value="Finding accommodation">Finding accommodation</option>
+                            <option value="Listing a property">Listing a property</option>
+                            <option value="Existing property enquiry">Existing property enquiry</option>
+                            <option value="Referral or landlord arrangement">Referral or landlord arrangement</option>
+                            <option value="Website support">Website support</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contactMessage">Your message</label>
+                        <textarea id="contactMessage" rows="5"
+                            placeholder="Tell us how we can help..." required></textarea>
+                    </div>
+
+                    <label class="contact-consent">
+                        <input type="checkbox" id="contactConsent" required>
+                        <span>
+                            I agree that my contact details may be used
+                            to respond to this enquiry.
+                        </span>
+                    </label>
+
+                    <button type="submit" class="btn btn-primary contact-submit" disabled>
+                        Contact form coming soon
+                    </button>
+
+                    <p class="contact-form-notice">
+                        Message submission will be activated when the
+                        database connection is implemented.
+                    </p>
+
+                </form>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- QUICK LINKS -->
+    <section class="contact-help">
+        <div class="container">
+
+            <div class="section-heading">
+                <span class="section-eyebrow">Quick links</span>
+                <h2>Looking for something specific?</h2>
+            </div>
+
+            <div class="contact-help-grid">
+
+                <a href="accommodation.html" class="help-card">
+                    <span>⌂</span>
+                    <h3>Find accommodation</h3>
+                    <p>Explore rental opportunities in Mahikeng.</p>
+                    <strong>Browse listings →</strong>
+                </a>
+
+                <a href="list-property.html" class="help-card">
+                    <span>▣</span>
+                    <h3>List your property</h3>
+                    <p>Submit accommodation for review and listing.</p>
+                    <strong>Submit property →</strong>
+                </a>
+
+                <a href="how-it-works.html" class="help-card">
+                    <span>?</span>
+                    <h3>How it works</h3>
+                    <p>Understand how tenants and landlords use the platform.</p>
+                    <strong>Learn more →</strong>
+                </a>
+
+            </div>
+
+        </div>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <div class="container footer-bottom">
+        <p>&copy; <span id="currentYear"></span> Kgotlello Accommodation Connect.</p>
+        <p>Connecting people with places to call home.</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="assets/js/supabase.js"></script>
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>

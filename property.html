@@ -1,0 +1,220 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#123D32">
+
+    <title>Accommodation Details | Kgotlello Accommodation Connect</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/property.css">
+</head>
+
+<body>
+
+<header class="site-header">
+    <div class="container header-inner">
+
+        <a href="index.html" class="brand">
+            <span class="brand-mark">K</span>
+            <span class="brand-name">
+                Kgotlello
+                <small>Accommodation Connect</small>
+            </span>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="main-nav" id="mainNav">
+            <a href="index.html">Home</a>
+            <a href="accommodation.html">Find Accommodation</a>
+            <a href="how-it-works.html">How It Works</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+            <a href="list-property.html" class="nav-cta">List Your Property</a>
+        </nav>
+
+    </div>
+</header>
+
+<main class="property-page">
+
+    <div class="container">
+
+        <div class="property-breadcrumb">
+            <a href="index.html">Home</a>
+            <span>/</span>
+            <a href="accommodation.html">Accommodation</a>
+            <span>/</span>
+            <span>Property Details</span>
+        </div>
+
+        <section class="property-unavailable" id="propertyUnavailable">
+            <div class="unavailable-icon">⌂</div>
+            <h1>Accommodation not available</h1>
+            <p>
+                This property could not be found or is no longer available.
+                Please return to the accommodation directory to explore
+                other listings.
+            </p>
+            <a href="accommodation.html" class="btn btn-primary">
+                Browse Accommodation
+            </a>
+        </section>
+
+        <section class="property-content" id="propertyContent" hidden>
+
+            <div class="property-heading">
+                <div>
+                    <span class="property-reference" id="propertyReference"></span>
+                    <h1 id="propertyTitle"></h1>
+                    <p id="propertyLocation"></p>
+                </div>
+
+                <div class="property-price">
+                    <strong id="propertyPrice"></strong>
+                    <span>per month</span>
+                </div>
+            </div>
+
+            <div class="property-gallery" id="propertyGallery">
+                <div class="gallery-main" id="galleryMain"></div>
+                <div class="gallery-side">
+                    <div id="gallerySecond"></div>
+                    <div id="galleryThird"></div>
+                </div>
+            </div>
+
+            <div class="property-layout">
+
+                <div class="property-main">
+
+                    <section class="property-section">
+                        <h2>About this accommodation</h2>
+                        <p id="propertyDescription"></p>
+                    </section>
+
+                    <section class="property-section">
+                        <h2>Accommodation details</h2>
+
+                        <div class="property-facts">
+                            <div>
+                                <span>Type</span>
+                                <strong id="propertyType"></strong>
+                            </div>
+                            <div>
+                                <span>Bedrooms</span>
+                                <strong id="propertyBedrooms"></strong>
+                            </div>
+                            <div>
+                                <span>Bathrooms</span>
+                                <strong id="propertyBathrooms"></strong>
+                            </div>
+                            <div>
+                                <span>Availability</span>
+                                <strong id="propertyAvailability"></strong>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="property-section">
+                        <h2>Facilities and benefits</h2>
+                        <div class="property-features" id="propertyFeatures"></div>
+                    </section>
+
+                    <section class="property-section">
+                        <h2>Important information</h2>
+                        <div id="propertyNotes"></div>
+                    </section>
+
+                </div>
+
+                <aside class="enquiry-card">
+
+                    <div class="enquiry-heading">
+                        <span>Interested in this property?</span>
+                        <h2>Send an enquiry</h2>
+                        <p>Let us know if you would like more information.</p>
+                    </div>
+
+                    <form id="propertyEnquiryForm">
+
+                        <div class="form-group">
+                            <label for="tenantName">Full name</label>
+                            <input type="text" id="tenantName" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="tenantPhone">Contact number</label>
+                            <input type="tel" id="tenantPhone" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="tenantEmail">Email address (optional)</label>
+                            <input type="email" id="tenantEmail">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="moveInDate">Intended move-in date</label>
+                            <input type="date" id="moveInDate">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="tenantMessage">Your message</label>
+                            <textarea id="tenantMessage" rows="4"
+                                placeholder="Tell us a little about your accommodation requirements..."></textarea>
+                        </div>
+
+                        <label class="consent-label">
+                            <input type="checkbox" id="privacyConsent" required>
+                            <span>I agree that my details may be used to respond to this enquiry.</span>
+                        </label>
+
+                        <button type="submit" class="btn btn-primary enquiry-submit" disabled>
+                            Enquiries coming soon
+                        </button>
+
+                        <p class="form-notice">
+                            Enquiry submissions will be enabled once the database
+                            and referral tracking system are connected.
+                        </p>
+
+                    </form>
+
+                </aside>
+
+            </div>
+
+        </section>
+
+    </div>
+
+</main>
+
+<footer class="site-footer">
+    <div class="container footer-bottom">
+        <p>&copy; <span id="currentYear"></span> Kgotlello Accommodation Connect.</p>
+        <p>Connecting people with places to call home.</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="assets/js/supabase.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/property.js"></script>
+<script src="assets/js/enquiry.js"></script>
+
+</body>
+</html>
+

@@ -1,0 +1,348 @@
+
+/* =====================================================
+   KGOTLELLO ACCOMMODATION CONNECT
+   PROPERTY DETAILS PAGE
+===================================================== */
+
+.property-page {
+    padding: 30px 0 75px;
+    min-height: 65vh;
+}
+
+.property-breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    color: var(--muted);
+    font-size: 13px;
+    margin-bottom: 30px;
+}
+
+.property-breadcrumb a {
+    color: var(--green);
+    text-decoration: none;
+}
+
+.property-breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.property-unavailable {
+    max-width: 540px;
+    margin: 75px auto;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+.unavailable-icon {
+    width: 65px;
+    height: 65px;
+    display: grid;
+    place-items: center;
+    margin: 0 auto 20px;
+    background: var(--green-soft);
+    color: var(--green);
+    border-radius: 50%;
+    font-size: 32px;
+}
+
+.property-unavailable h1 {
+    font-family: "Manrope", sans-serif;
+    font-size: 27px;
+    margin-bottom: 12px;
+    color: var(--text);
+}
+
+.property-unavailable p {
+    color: var(--muted);
+    line-height: 1.7;
+    margin-bottom: 24px;
+}
+
+.property-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+.property-reference {
+    display: inline-block;
+    color: var(--maroon);
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 9px;
+}
+
+.property-heading h1 {
+    font-family: "Manrope", sans-serif;
+    font-size: clamp(25px, 4vw, 35px);
+    color: var(--green);
+    margin: 0 0 8px;
+}
+
+.property-heading p {
+    color: var(--muted);
+    margin: 0;
+}
+
+.property-price {
+    text-align: right;
+    white-space: nowrap;
+}
+
+.property-price strong {
+    display: block;
+    color: var(--green);
+    font-size: 25px;
+    font-family: "Manrope", sans-serif;
+}
+
+.property-price span {
+    font-size: 12px;
+    color: var(--muted);
+}
+
+.property-gallery {
+    display: grid;
+    grid-template-columns: 1.7fr 1fr;
+    gap: 12px;
+    height: 370px;
+    margin-bottom: 35px;
+}
+
+.gallery-main,
+.gallery-side > div {
+    background: var(--green-soft);
+    border-radius: 12px;
+    overflow: hidden;
+    min-height: 0;
+}
+
+.gallery-side {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 12px;
+}
+
+.property-gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.property-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 340px;
+    align-items: start;
+    gap: 35px;
+}
+
+.property-section {
+    padding: 25px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.property-section:first-child {
+    padding-top: 0;
+}
+
+.property-section h2 {
+    font-family: "Manrope", sans-serif;
+    font-size: 19px;
+    color: var(--green);
+    margin-bottom: 17px;
+}
+
+.property-section p {
+    color: var(--muted);
+    line-height: 1.8;
+    margin: 0;
+}
+
+.property-facts {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.property-facts > div {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    padding: 15px;
+}
+
+.property-facts span,
+.property-facts strong {
+    display: block;
+}
+
+.property-facts span {
+    font-size: 12px;
+    color: var(--muted);
+    margin-bottom: 7px;
+}
+
+.property-facts strong {
+    color: var(--text);
+    font-size: 14px;
+}
+
+.property-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.feature-item {
+    background: var(--green-soft);
+    color: var(--green);
+    border-radius: 7px;
+    padding: 9px 13px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+#propertyNotes {
+    color: var(--muted);
+    line-height: 1.8;
+}
+
+.enquiry-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 23px;
+    box-shadow: 0 8px 25px rgba(18, 61, 50, 0.05);
+    position: sticky;
+    top: 25px;
+}
+
+.enquiry-heading {
+    margin-bottom: 22px;
+}
+
+.enquiry-heading > span {
+    color: var(--maroon);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.enquiry-heading h2 {
+    color: var(--green);
+    font-family: "Manrope", sans-serif;
+    font-size: 21px;
+    margin: 7px 0;
+}
+
+.enquiry-heading p {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 7px;
+    color: var(--text);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 11px 12px;
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    font: inherit;
+    font-size: 13px;
+    color: var(--text);
+    background: #fff;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--green);
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.consent-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.5;
+    margin: 18px 0;
+}
+
+.consent-label input {
+    margin-top: 3px;
+}
+
+.enquiry-submit {
+    width: 100%;
+}
+
+.enquiry-submit:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+
+.form-notice {
+    margin-top: 13px;
+    font-size: 11px;
+    color: var(--muted);
+    line-height: 1.6;
+    text-align: center;
+}
+
+@media (max-width: 900px) {
+    .property-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .enquiry-card {
+        position: static;
+    }
+}
+
+@media (max-width: 600px) {
+    .property-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .property-price {
+        text-align: left;
+    }
+
+    .property-gallery {
+        height: 250px;
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-side {
+        display: none;
+    }
+
+    .property-facts {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .property-unavailable {
+        margin: 35px auto;
+    }
+}

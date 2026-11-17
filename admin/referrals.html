@@ -1,0 +1,223 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Referral Tracking | Kgotlello Admin</title>
+    <link rel="stylesheet" href="../assets/css/admin.css">
+</head>
+<body class="admin-page">
+
+<aside class="admin-sidebar">
+    <div class="sidebar-brand">
+        <div class="brand-mark">K</div>
+        <div>
+            <strong>Kgotlello</strong>
+            <small>Administration</small>
+        </div>
+    </div>
+
+    <nav class="admin-nav">
+        <a href="dashboard.html">▦ Dashboard</a>
+        <a href="submissions.html">▤ Landlord Applications</a>
+        <a href="properties.html">⌂ Property Listings</a>
+        <a href="enquiries.html">✉ Tenant Enquiries</a>
+        <a href="referrals.html" class="active">R Referral Tracking</a>
+        <a href="../index.html" target="_blank">↗ View Website</a>
+    </nav>
+
+    <button id="logoutButton" class="logout-button">Sign Out</button>
+</aside>
+
+<main class="admin-main">
+
+    <header class="admin-topbar">
+        <div>
+            <span class="eyebrow">BUSINESS MANAGEMENT</span>
+            <h1>Referral Tracking</h1>
+            <p>Track tenant placements and landlord referral fees.</p>
+        </div>
+
+        <div class="admin-user">
+            <div class="user-avatar">K</div>
+            <div>
+                <strong>Administrator</strong>
+                <small id="adminEmail">Loading...</small>
+            </div>
+        </div>
+    </header>
+
+    <section class="property-summary">
+        <div>
+            <span>Total referrals</span>
+            <strong id="referralTotal">—</strong>
+        </div>
+
+        <div>
+            <span>Pending</span>
+            <strong id="referralPending">—</strong>
+        </div>
+
+        <div>
+            <span>Successful placements</span>
+            <strong id="referralSuccessful">—</strong>
+        </div>
+
+        <div>
+            <span>Fees outstanding</span>
+            <strong id="referralOutstanding">—</strong>
+        </div>
+
+        <div>
+            <span>Fees received</span>
+            <strong id="referralReceived">—</strong>
+        </div>
+    </section>
+
+    <section class="property-panel">
+
+        <div class="property-toolbar">
+            <div>
+                <h2>Referral records</h2>
+                <p>Monitor placements and payments from landlords.</p>
+            </div>
+
+            <button id="refreshReferrals" class="secondary-button">
+                ↻ Refresh
+            </button>
+        </div>
+
+        <div class="property-filters">
+
+            <input
+                type="search"
+                id="referralSearch"
+                placeholder="Search tenant, landlord or property..."
+            >
+
+            <select id="referralStatus">
+                <option value="">All statuses</option>
+                <option value="pending">Pending</option>
+                <option value="successful">Successful</option>
+                <option value="unsuccessful">Unsuccessful</option>
+                <option value="cancelled">Cancelled</option>
+            </select>
+
+            <select id="referralPayment">
+                <option value="">All payments</option>
+                <option value="true">Fee received</option>
+                <option value="false">Fee outstanding</option>
+            </select>
+
+        </div>
+
+        <div class="property-table-wrap">
+            <table class="property-table">
+                <thead>
+                    <tr>
+                        <th>Tenant</th>
+                        <th>Property</th>
+                        <th>Referral status</th>
+                        <th>Referral fee</th>
+                        <th>Payment</th>
+                        <th>Placement date</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                <tbody id="referralTableBody">
+                    <tr>
+                        <td colspan="7">Loading referrals...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div id="referralMessage" class="dashboard-message"></div>
+
+    </section>
+
+    <footer class="admin-footer">
+        Kgotlello Accommodation Connect · Administration Portal · 2026
+    </footer>
+
+</main>
+
+<div id="referralModal" class="application-modal" hidden>
+    <div class="application-modal-card">
+
+        <div class="modal-heading">
+            <div>
+                <span class="eyebrow">REFERRAL INFORMATION</span>
+                <h2 id="modalReferralName">Referral details</h2>
+            </div>
+
+            <button
+                id="closeReferralModal"
+                class="modal-close"
+                aria-label="Close"
+            >×</button>
+        </div>
+
+        <div id="referralDetails" class="application-details"></div>
+
+        <div class="form-group" style="margin-top:20px;">
+            <label for="referralStatusUpdate">Referral status</label>
+            <select id="referralStatusUpdate">
+                <option value="pending">Pending</option>
+                <option value="successful">Successful</option>
+                <option value="unsuccessful">Unsuccessful</option>
+                <option value="cancelled">Cancelled</option>
+            </select>
+        </div>
+
+      
+<div class="form-group">
+    <label for="referralFee">Fixed referral fee</label>
+    <input
+        type="text"
+        id="referralFee"
+        value="R250.00"
+        readonly
+    >
+</div>
+
+
+        <div class="form-group">
+            <label for="referralPaymentStatus">Payment status</label>
+            <select id="referralPaymentStatus">
+                <option value="false">Outstanding</option>
+                <option value="true">Received</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="referralPlacementDate">Placement date</label>
+            <input type="date" id="referralPlacementDate">
+        </div>
+
+        <div class="form-group">
+            <label for="referralNotes">Administrative notes</label>
+            <textarea
+                id="referralNotes"
+                rows="4"
+                placeholder="Record landlord follow-ups, payment details or placement notes..."
+            ></textarea>
+        </div>
+
+        <button id="saveReferral" class="primary-button">
+            Save Referral
+        </button>
+
+        <div id="referralModalMessage" class="dashboard-message"></div>
+
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="../assets/js/supabase.js"></script>
+<script src="../assets/js/referrals.js"></script>
+
+</body>
+</html>

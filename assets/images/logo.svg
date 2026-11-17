@@ -1,0 +1,61 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 82" fill="none">
+
+  <!-- Brand icon background -->
+  <rect x="2" y="7" width="66" height="66" rx="17" fill="#123D32"/>
+
+  <!-- House roof -->
+  <path
+    d="M15 37L35 20L55 37"
+    stroke="#FFFFFF"
+    stroke-width="3.2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+
+  <!-- House structure -->
+  <path
+    d="M20 35V58H50V35"
+    stroke="#FFFFFF"
+    stroke-width="3.2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+
+  <!-- Door -->
+  <path
+    d="M31 58V43H40V58"
+    stroke="#FFFFFF"
+    stroke-width="2.8"
+    stroke-linejoin="round"
+  />
+
+  <!-- Location accent -->
+  <circle cx="53" cy="25" r="5" fill="#C94A50"/>
+  <circle cx="53" cy="25" r="2" fill="#FFFFFF"/>
+
+  <!-- Brand name -->
+  <text
+    x="82"
+    y="40"
+    font-family="Arial, sans-serif"
+    font-size="26"
+    font-weight="700"
+    letter-spacing="1"
+    fill="#142D46">
+    KGOTLELLO
+  </text>
+
+  <!-- Brand description -->
+  <text
+    x="83"
+    y="59"
+    font-family="Arial, sans-serif"
+    font-size="11"
+    font-weight="600"
+    letter-spacing="2.1"
+    fill="#42665A">
+    ACCOMMODATION CONNECT
+  </text>
+
+</svg>

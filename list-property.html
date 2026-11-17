@@ -1,0 +1,630 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#123D32">
+
+    <title>List Your Property | Kgotlello Accommodation Connect</title>
+
+    <meta name="description" content="Submit your accommodation in Mahikeng for review and listing on Kgotlello Accommodation Connect. No landlord account required.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/submit-property.css">
+
+    <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<header class="site-header">
+    <div class="container nav-container">
+
+        <a href="index.html" class="brand">
+            <img src="assets/images/logo.svg" alt="Kgotlello Accommodation Connect">
+        </a>
+
+        <button class="menu-toggle" id="menuToggle"
+                aria-label="Open navigation" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="main-nav" id="mainNav">
+            <a href="index.html">Home</a>
+            <a href="accommodation.html">Find Accommodation</a>
+            <a href="index.html#areas">Explore Areas</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+
+            <a href="list-property.html" class="nav-landlord active">
+                List Your Property <span>+</span>
+            </a>
+        </nav>
+
+    </div>
+</header>
+
+
+<main>
+
+    <!-- PAGE INTRODUCTION -->
+    <section class="submit-hero">
+        <div class="container submit-hero-inner">
+
+            <div class="submit-hero-content">
+                <span class="submit-eyebrow">
+                    FOR LANDLORDS AND PROPERTY OWNERS
+                </span>
+
+                <h1>
+                    Have accommodation<br>
+                    <span>available in Mahikeng?</span>
+                </h1>
+
+                <p>
+                    Reach people looking for a place to stay. Tell us about
+                    your property and our team will review the details before
+                    it is published on Kgotlello.
+                </p>
+
+                <div class="submit-benefits">
+                    <span><b>✓</b> No account required</span>
+                    <span><b>✓</b> Listing review before publication</span>
+                    <span><b>✓</b> Local accommodation audience</span>
+                </div>
+            </div>
+
+            <div class="submit-hero-card">
+                <div class="submit-card-icon">⌂</div>
+                <span>KGOTLELLO PROPERTY LISTINGS</span>
+                <h3>Your property could be someone's next home.</h3>
+                <p>
+                    Submit your details and let us help connect your
+                    accommodation with prospective tenants.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- SUBMISSION PROCESS -->
+    <section class="submission-steps">
+        <div class="container submission-steps-grid">
+
+            <div class="submission-step">
+                <span>01</span>
+                <div>
+                    <strong>Submit details</strong>
+                    <small>Tell us about your property.</small>
+                </div>
+            </div>
+
+            <div class="submission-step">
+                <span>02</span>
+                <div>
+                    <strong>Verification</strong>
+                    <small>Our team reviews the information.</small>
+                </div>
+            </div>
+
+            <div class="submission-step">
+                <span>03</span>
+                <div>
+                    <strong>Publication</strong>
+                    <small>Approved listings can go live.</small>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- PROPERTY SUBMISSION FORM -->
+    <section class="section submission-section">
+
+        <div class="container submission-layout">
+
+            <div class="submission-main">
+
+                <div class="submission-heading">
+                    <span class="eyebrow">PROPERTY SUBMISSION</span>
+                    <h2>Tell us about your accommodation.</h2>
+                    <p>
+                        Complete the sections below. Fields marked with
+                        an asterisk (*) are required.
+                    </p>
+                </div>
+
+
+                <form id="propertySubmissionForm" class="property-form">
+
+                    <!-- LANDLORD DETAILS -->
+                    <div class="form-section">
+
+                        <div class="form-section-heading">
+                            <span class="form-section-number">01</span>
+                            <div>
+                                <h3>Your contact details</h3>
+                                <p>How can we reach you about your property?</p>
+                            </div>
+                        </div>
+
+                        <div class="form-grid">
+
+                            <div class="form-group">
+                                <label for="landlordName">Full name *</label>
+                                <input type="text" id="landlordName"
+                                       name="landlord_name"
+                                       placeholder="Enter your full name"
+                                       autocomplete="name" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="landlordPhone">Contact number *</label>
+                                <input type="tel" id="landlordPhone"
+                                       name="landlord_phone"
+                                       placeholder="e.g. 071 234 5678"
+                                       autocomplete="tel"
+                                       required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="landlordEmail">Email address</label>
+                                <input type="email" id="landlordEmail"
+                                       name="landlord_email"
+                                       placeholder="you@example.com"
+                                       autocomplete="email">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contactMethod">Preferred contact method *</label>
+                                <select id="contactMethod"
+                                        name="contact_method" required>
+                                    <option value="">Choose contact method</option>
+                                    <option value="WhatsApp">WhatsApp</option>
+                                    <option value="Phone call">Phone call</option>
+                                    <option value="Email">Email</option>
+                                </select>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <!-- PROPERTY DETAILS -->
+                    <div class="form-section">
+
+                        <div class="form-section-heading">
+                            <span class="form-section-number">02</span>
+                            <div>
+                                <h3>Property information</h3>
+                                <p>Give us the basic details of the accommodation.</p>
+                            </div>
+                        </div>
+
+                        <div class="form-grid">
+
+                            <div class="form-group full-width">
+                                <label for="propertyTitle">Property title *</label>
+                                <input type="text" id="propertyTitle"
+                                       name="property_title"
+                                       placeholder="e.g. Furnished student rooms in Mmabatho"
+                                       maxlength="100" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="propertyType">Accommodation type *</label>
+                                <select id="propertyType"
+                                        name="property_type" required>
+                                    <option value="">Select accommodation type</option>
+                                    <option value="Room">Room</option>
+                                    <option value="Bachelor unit">Bachelor unit</option>
+                                    <option value="Flat / Apartment">Flat / Apartment</option>
+                                    <option value="House">House</option>
+                                    <option value="Shared accommodation">Shared accommodation</option>
+                                    <option value="Student accommodation">Student accommodation</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="propertyArea">Area *</label>
+                                <select id="propertyArea"
+                                        name="property_area" required>
+                                    <option value="">Select an area</option>
+                                    <option value="Mmabatho">Mmabatho</option>
+                                    <option value="Golfview">Golfview</option>
+                                    <option value="Montshiwa">Montshiwa</option>
+                                    <option value="Unit 7">Unit 7</option>
+                                    <option value="Unit 8">Unit 8</option>
+                                    <option value="Mega City surroundings">Mega City surroundings</option>
+                                    <option value="Lonely Park">Lonely Park</option>
+                                    <option value="Riviera Park">Riviera Park</option>
+                                    <option value="Other">Other area</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group full-width" id="otherAreaGroup" hidden>
+                                <label for="otherArea">Specify the area *</label>
+                                <input type="text" id="otherArea"
+                                       name="other_area"
+                                       placeholder="Enter the area">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="propertyAddress">Street / general address</label>
+                                <input type="text" id="propertyAddress"
+                                       name="property_address"
+                                       placeholder="Street name or nearby landmark">
+                                <small>We will confirm what address information may be published.</small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="propertyAvailability">Availability *</label>
+                                <select id="propertyAvailability"
+                                        name="availability" required>
+                                    <option value="">Select availability</option>
+                                    <option value="Available now">Available now</option>
+                                    <option value="Available soon">Available soon</option>
+                                    <option value="Coming soon">Coming soon</option>
+                                </select>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <!-- RENTAL DETAILS -->
+                    <div class="form-section">
+
+                        <div class="form-section-heading">
+                            <span class="form-section-number">03</span>
+                            <div>
+                                <h3>Rental and accommodation details</h3>
+                                <p>Help prospective tenants understand what is offered.</p>
+                            </div>
+                        </div>
+
+                        <div class="form-grid">
+
+                            <div class="form-group">
+                                <label for="monthlyRent">Monthly rental (R) *</label>
+                                <input type="number" id="monthlyRent"
+                                       name="monthly_rent"
+                                       min="1" step="1"
+                                       placeholder="e.g. 2500" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="deposit">Deposit amount (R)</label>
+                                <input type="number" id="deposit"
+                                       name="deposit"
+                                       min="0" step="1"
+                                       placeholder="e.g. 2500">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="bedrooms">Number of bedrooms *</label>
+                                <select id="bedrooms" name="bedrooms" required>
+                                    <option value="">Select bedrooms</option>
+                                    <option value="0">Bachelor / Open plan</option>
+                                    <option value="1">1 bedroom</option>
+                                    <option value="2">2 bedrooms</option>
+                                    <option value="3">3 bedrooms</option>
+                                    <option value="4">4 bedrooms</option>
+                                    <option value="5+">5 or more bedrooms</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="availableUnits">Available rooms / units</label>
+                                <input type="number" id="availableUnits"
+                                       name="available_units"
+                                       min="1" step="1"
+                                       placeholder="e.g. 3">
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label for="propertyDescription">Property description *</label>
+                                <textarea id="propertyDescription"
+                                          name="property_description"
+                                          rows="5" maxlength="1500"
+                                          placeholder="Describe the accommodation, its condition, facilities and anything tenants should know..."
+                                          required></textarea>
+                                <small>Maximum 1,500 characters.</small>
+                            </div>
+
+                        </div>
+
+
+                        <div class="amenities-heading">
+                            <strong>Property features and facilities</strong>
+                            <span>Select all that apply.</span>
+                        </div>
+
+                        <div class="amenities-grid">
+
+                            <label class="amenity-option">
+                                <input type="checkbox" name="amenities" value="Furnished">
+                                <span>Furnished</span>
+                            </label>
+
+                            <label class="amenity-option">
+                                <input type="checkbox" name="amenities" value="Unfurnished">
+                                <span>Unfurnished</span>
+                            </label>
+
+                            <label class="amenity-option">
+                                <input type="checkbox" name="amenities" value="Water included">
+                                <span>Water included</span>
+                            </label>
+
+                            <label class="amenity-option">
+                                <input type="checkbox" name="amenities" value="Electricity included">
+                                <span>Electricity included</span>
+                            </label>
+
+                            <label class="amenity-option">
+                                <input type="checkbox" name="amenities" value="Wi-Fi">
+                                <span>Wi-Fi</span>
+                            </label>
+
+                            <label class="amenity-option">
+                                <input type="checkbox" name="amenities" value="Parking">
+                                <span>Parking</span>
+                            </label>
+
+                            <label class="amenity-option">
+                                <input type="checkbox" name="amenities" value="Security">
+                                <span>Security</span>
+                            </label>
+
+                            <label class="amenity-option">
+                                <input type="checkbox" name="amenities" value="Shared kitchen">
+                                <span>Shared kitchen</span>
+                            </label>
+
+                            <label class="amenity-option">
+                                <input type="checkbox" name="amenities" value="Private bathroom">
+                                <span>Private bathroom</span>
+                            </label>
+
+                            <label class="amenity-option">
+                                <input type="checkbox" name="amenities" value="Garden">
+                                <span>Garden</span>
+                            </label>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- PHOTOGRAPHS -->
+                    <div class="form-section">
+
+                        <div class="form-section-heading">
+                            <span class="form-section-number">04</span>
+                            <div>
+                                <h3>Property photographs</h3>
+                                <p>Good photographs help people understand the accommodation.</p>
+                            </div>
+                        </div>
+
+                        <div class="upload-area">
+                            <div class="upload-icon">↑</div>
+
+                            <h4>Add property photographs</h4>
+
+                            <p>
+                                Choose clear photographs of the rooms,
+                                exterior and facilities.
+                            </p>
+
+                            <label for="propertyImages" class="upload-button">
+                                Choose photographs
+                            </label>
+
+                            <input type="file" id="propertyImages"
+                                   name="property_images"
+                                   accept="image/jpeg,image/png,image/webp"
+                                   multiple hidden>
+
+                            <small>JPG, PNG or WebP. Maximum 5 images, 5 MB each.</small>
+
+                            <div id="imagePreview" class="image-preview"></div>
+                        </div>
+
+                    </div>
+
+
+                    <!-- CONFIRMATION -->
+                    <div class="form-section confirmation-section">
+
+                        <div class="form-section-heading">
+                            <span class="form-section-number">05</span>
+                            <div>
+                                <h3>Final confirmation</h3>
+                                <p>Please confirm the following before submitting.</p>
+                            </div>
+                        </div>
+
+                        <label class="confirmation-option">
+                            <input type="checkbox" id="ownershipConfirm"
+                                   name="ownership_confirmation" required>
+                            <span>
+                                I confirm that I am the property owner or
+                                authorised to submit this accommodation for listing.
+                            </span>
+                        </label>
+
+                        <label class="confirmation-option">
+                            <input type="checkbox" id="accuracyConfirm"
+                                   name="accuracy_confirmation" required>
+                            <span>
+                                I confirm that the information supplied is
+                                accurate to the best of my knowledge.
+                            </span>
+                        </label>
+
+                        <label class="confirmation-option">
+                            <input type="checkbox" id="privacyConfirm"
+                                   name="privacy_consent" required>
+                            <span>
+                                I consent to Kgotlello using these details to
+                                review this submission and contact me about it.
+                            </span>
+                        </label>
+
+                    </div>
+
+
+                    <div id="submissionMessage" class="submission-message"
+                         role="status" aria-live="polite" hidden></div>
+
+
+                    <div class="form-submit-area">
+
+                        <div>
+                            <strong>Ready to submit?</strong>
+                            <span>Your property will require review before publication.</span>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary submit-property-button">
+                            Submit Property <span>→</span>
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+
+            <!-- SIDE INFORMATION -->
+            <aside class="submission-sidebar">
+
+                <div class="sidebar-card">
+                    <div class="sidebar-card-icon">✓</div>
+                    <h3>What happens next?</h3>
+
+                    <div class="sidebar-timeline">
+
+                        <div class="timeline-item">
+                            <span>1</span>
+                            <div>
+                                <strong>Submission received</strong>
+                                <p>Your property information is collected.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <span>2</span>
+                            <div>
+                                <strong>Information reviewed</strong>
+                                <p>Our team checks the details and may contact you.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <span>3</span>
+                            <div>
+                                <strong>Listing decision</strong>
+                                <p>Approved properties can be published.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="sidebar-card important-card">
+                    <div class="sidebar-card-icon">!</div>
+                    <h3>Before you submit</h3>
+
+                    <ul>
+                        <li>Use a contact number that you can access.</li>
+                        <li>Provide the correct rental amount.</li>
+                        <li>Only upload photographs you are authorised to use.</li>
+                        <li>Make sure the accommodation is genuinely available as described.</li>
+                    </ul>
+                </div>
+
+
+                <div class="sidebar-help">
+                    <span>NEED HELP?</span>
+                    <h3>Have a question about listing your property?</h3>
+                    <p>Contact our team if you need assistance with the submission process.</p>
+                    <a href="contact.html">Contact Kgotlello →</a>
+                </div>
+
+            </aside>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- FOOTER -->
+<footer class="site-footer">
+
+    <div class="container footer-main">
+
+        <div class="footer-brand">
+            <img src="assets/images/logo.svg" alt="Kgotlello Accommodation Connect">
+
+            <p>
+                Connecting people with accommodation opportunities
+                around Mahikeng and surrounding areas.
+            </p>
+        </div>
+
+        <div class="footer-column">
+            <h4>Explore</h4>
+            <a href="index.html">Home</a>
+            <a href="accommodation.html">Find Accommodation</a>
+            <a href="index.html#areas">Explore Areas</a>
+        </div>
+
+        <div class="footer-column">
+            <h4>Information</h4>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="list-property.html">List Your Property</a>
+        </div>
+
+        <div class="footer-column">
+            <h4>Important</h4>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms and Conditions</a>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <div class="container footer-bottom-content">
+            <span>© <span id="currentYear"></span> Kgotlello Accommodation Connect.</span>
+            <span>Built for Mahikeng.</span>
+        </div>
+    </div>
+
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="assets/js/supabase.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/submissions.js"></script>
+
+</body>
+</html>

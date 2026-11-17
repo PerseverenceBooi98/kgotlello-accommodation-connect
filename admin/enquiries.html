@@ -1,0 +1,184 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tenant Enquiries | Kgotlello Admin</title>
+    <link rel="stylesheet" href="../assets/css/admin.css">
+</head>
+<body class="admin-page">
+
+<aside class="admin-sidebar">
+    <div class="sidebar-brand">
+        <div class="brand-mark">K</div>
+        <div>
+            <strong>Kgotlello</strong>
+            <small>Administration</small>
+        </div>
+    </div>
+
+    <nav class="admin-nav">
+        <a href="dashboard.html">▦ Dashboard</a>
+        <a href="submissions.html">▤ Landlord Applications</a>
+        <a href="properties.html">⌂ Property Listings</a>
+        <a href="enquiries.html" class="active">✉ Tenant Enquiries</a>
+        <a href="referrals.html">R Referral Tracking</a>
+        <a href="../index.html" target="_blank">↗ View Website</a>
+    </nav>
+
+    <button id="logoutButton" class="logout-button">Sign Out</button>
+</aside>
+
+<main class="admin-main">
+
+    <header class="admin-topbar">
+        <div>
+            <span class="eyebrow">TENANT MANAGEMENT</span>
+            <h1>Tenant Enquiries</h1>
+            <p>Manage prospective tenants and property enquiries.</p>
+        </div>
+
+        <div class="admin-user">
+            <div class="user-avatar">K</div>
+            <div>
+                <strong>Administrator</strong>
+                <small id="adminEmail">Loading...</small>
+            </div>
+        </div>
+    </header>
+
+    <section class="property-summary">
+        <div>
+            <span>Total enquiries</span>
+            <strong id="enquiryTotal">—</strong>
+        </div>
+        <div>
+            <span>New</span>
+            <strong id="enquiryNew">—</strong>
+        </div>
+        <div>
+            <span>Contacted</span>
+            <strong id="enquiryContacted">—</strong>
+        </div>
+        <div>
+            <span>Viewings arranged</span>
+            <strong id="enquiryViewing">—</strong>
+        </div>
+        <div>
+            <span>Successful</span>
+            <strong id="enquirySuccessful">—</strong>
+        </div>
+    </section>
+
+    <section class="property-panel">
+
+        <div class="property-toolbar">
+            <div>
+                <h2>Enquiry records</h2>
+                <p>Review tenant interest and manage enquiry progress.</p>
+            </div>
+
+            <button id="refreshEnquiries" class="secondary-button">
+                ↻ Refresh
+            </button>
+        </div>
+
+        <div class="property-filters">
+
+            <input
+                type="search"
+                id="enquirySearch"
+                placeholder="Search tenant, phone or property..."
+            >
+
+            <select id="enquiryStatus">
+                <option value="">All statuses</option>
+                <option value="new">New</option>
+                <option value="contacted">Contacted</option>
+                <option value="viewing_arranged">Viewing Arranged</option>
+                <option value="successful">Successful</option>
+                <option value="unsuccessful">Unsuccessful</option>
+                <option value="closed">Closed</option>
+            </select>
+
+        </div>
+
+        <div class="property-table-wrap">
+            <table class="property-table">
+                <thead>
+                    <tr>
+                        <th>Tenant</th>
+                        <th>Contact</th>
+                        <th>Property</th>
+                        <th>Move-in date</th>
+                        <th>Date received</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                <tbody id="enquiryTableBody">
+                    <tr>
+                        <td colspan="7">Loading enquiries...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div id="enquiryMessage" class="dashboard-message"></div>
+
+    </section>
+
+    <footer class="admin-footer">
+        Kgotlello Accommodation Connect · Administration Portal · 2026
+    </footer>
+
+</main>
+
+<div id="enquiryModal" class="application-modal" hidden>
+    <div class="application-modal-card">
+
+        <div class="modal-heading">
+            <div>
+                <span class="eyebrow">TENANT ENQUIRY</span>
+                <h2 id="modalEnquiryName">Enquiry details</h2>
+            </div>
+
+            <button
+                id="closeEnquiryModal"
+                class="modal-close"
+                aria-label="Close"
+            >×</button>
+        </div>
+
+        <div id="enquiryDetails" class="application-details"></div>
+
+        <div class="form-group" style="margin-top:20px;">
+            <label for="enquiryStatusUpdate">Update enquiry status</label>
+
+            <select id="enquiryStatusUpdate">
+                <option value="new">New</option>
+                <option value="contacted">Contacted</option>
+                <option value="viewing_arranged">Viewing Arranged</option>
+                <option value="successful">Successful</option>
+                <option value="unsuccessful">Unsuccessful</option>
+                <option value="closed">Closed</option>
+            </select>
+        </div>
+
+        <button id="saveEnquiryStatus" class="primary-button">
+            Save Status
+        </button>
+
+        <div id="enquiryModalMessage" class="dashboard-message"></div>
+
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="../assets/js/supabase.js"></script>
+<script src="../assets/js/enquiries.js"></script>
+
+</body>
+</html>

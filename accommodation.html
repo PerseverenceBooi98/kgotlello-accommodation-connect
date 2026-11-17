@@ -1,0 +1,343 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#123D32">
+
+    <title>Find Accommodation | Kgotlello Accommodation Connect</title>
+
+    <meta name="description" content="Browse rooms, flats and houses for rent in Mahikeng and nearby neighbourhoods. Filter by location, rental price and facilities.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/listings.css">
+</head>
+
+<body>
+
+<header class="site-header">
+    <div class="container header-inner">
+
+        <a href="index.html" class="brand">
+            <span class="brand-mark">K</span>
+            <span class="brand-name">
+                <strong>KGOTLELLO</strong>
+                <small>ACCOMMODATION CONNECT</small>
+            </span>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle"
+                aria-label="Open navigation"
+                aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="main-nav" id="mainNav">
+            <a href="index.html">Home</a>
+            <a href="accommodation.html" class="active">Find Accommodation</a>
+            <a href="how-it-works.html">How It Works</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+            <a href="list-property.html" class="nav-landlord">List Your Property</a>
+        </nav>
+
+    </div>
+</header>
+
+
+<main>
+
+    <!-- PAGE INTRO -->
+    <section class="directory-intro">
+        <div class="container">
+
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <span>Find Accommodation</span>
+            </div>
+
+            <div class="directory-heading">
+                <div>
+                    <span class="section-kicker">YOUR NEXT PLACE COULD BE HERE</span>
+                    <h1>Find accommodation</h1>
+                    <p>
+                        Browse rental opportunities around Mahikeng.
+                        Choose what matters to you and find a space
+                        that suits your needs.
+                    </p>
+                </div>
+
+                <div class="locality-label">
+                    <span>⌖</span>
+                    Mahikeng and nearby areas
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- DIRECTORY -->
+    <section class="directory-section">
+        <div class="container directory-layout">
+
+            <!-- FILTERS -->
+            <aside class="filter-panel">
+
+                <div class="filter-heading">
+                    <div>
+                        <span class="section-kicker">NARROW YOUR SEARCH</span>
+                        <h2>Filters</h2>
+                    </div>
+
+                    <button type="button" id="resetFilters" class="reset-button">
+                        Reset
+                    </button>
+                </div>
+
+                <form id="filterForm">
+
+                    <div class="filter-group">
+                        <label for="filterArea">Location</label>
+
+                        <select id="filterArea" name="area">
+                            <option value="">All nearby areas</option>
+                            <option value="Mmabatho">Mmabatho</option>
+                            <option value="Golfview">Golfview</option>
+                            <option value="Montshiwa">Montshiwa</option>
+                            <option value="Riviera Park">Riviera Park</option>
+                            <option value="Unit 7">Unit 7</option>
+                            <option value="Unit 8">Unit 8</option>
+                            <option value="Lonely Park">Lonely Park</option>
+                            <option value="Mahikeng CBD">Mahikeng CBD</option>
+                        </select>
+                    </div>
+
+
+                    <div class="filter-group">
+                        <label for="filterType">Accommodation type</label>
+
+                        <select id="filterType" name="type">
+                            <option value="">Any type</option>
+                            <option value="room">Room</option>
+                            <option value="bachelor">Bachelor</option>
+                            <option value="flat">Flat / Apartment</option>
+                            <option value="house">House</option>
+                            <option value="shared">Shared accommodation</option>
+                        </select>
+                    </div>
+
+
+                    <div class="filter-group">
+                        <label>Monthly rental budget</label>
+
+                        <div class="price-range">
+                            <div>
+                                <label for="minPrice">Minimum (R)</label>
+                                <input type="number" id="minPrice"
+                                       name="minPrice" min="0"
+                                       placeholder="0">
+                            </div>
+
+                            <div>
+                                <label for="maxPrice">Maximum (R)</label>
+                                <input type="number" id="maxPrice"
+                                       name="maxPrice" min="0"
+                                       placeholder="Any">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="filter-divider"></div>
+
+
+                    <div class="filter-group">
+                        <label class="filter-group-title">Facilities and benefits</label>
+
+                        <div class="filter-options">
+
+                            <label class="check-option">
+                                <input type="checkbox" name="benefit" value="furnished">
+                                <span>Furnished</span>
+                            </label>
+
+                            <label class="check-option">
+                                <input type="checkbox" name="benefit" value="parking">
+                                <span>Parking available</span>
+                            </label>
+
+                            <label class="check-option">
+                                <input type="checkbox" name="benefit" value="water">
+                                <span>Water included</span>
+                            </label>
+
+                            <label class="check-option">
+                                <input type="checkbox" name="benefit" value="electricity">
+                                <span>Electricity included</span>
+                            </label>
+
+                            <label class="check-option">
+                                <input type="checkbox" name="benefit" value="wifi">
+                                <span>Wi-Fi available</span>
+                            </label>
+
+                            <label class="check-option">
+                                <input type="checkbox" name="benefit" value="privateBathroom">
+                                <span>Private bathroom</span>
+                            </label>
+
+                        </div>
+                    </div>
+
+                    <button type="submit" class="apply-filters">
+                        Apply filters
+                    </button>
+
+                </form>
+
+            </aside>
+
+
+            <!-- RESULTS -->
+            <div class="directory-results">
+
+                <div class="results-toolbar">
+
+                    <div>
+                        <h2>Available accommodation</h2>
+                        <p id="resultsCount">Browse local rental opportunities</p>
+                    </div>
+
+                    <div class="sort-control">
+                        <label for="sortListings">Sort by</label>
+                        <select id="sortListings">
+                            <option value="newest">Newest</option>
+                            <option value="price-low">Price: Low to high</option>
+                            <option value="price-high">Price: High to low</option>
+                        </select>
+                    </div>
+
+                </div>
+
+
+                <!-- PROPERTY CARDS WILL BE DISPLAYED HERE -->
+                <div class="property-grid" id="propertyGrid">
+
+                    <!-- Approved property cards will be loaded here -->
+
+                </div>
+
+
+                <!-- EMPTY STATE -->
+                <div class="directory-empty" id="emptyState">
+
+                    <div class="empty-house">⌂</div>
+
+                    <h3>No accommodation listed yet</h3>
+
+                    <p>
+                        We're preparing our local accommodation directory.
+                        Once landlords' properties have been reviewed and
+                        approved, they will appear here.
+                    </p>
+
+                    <a href="list-property.html" class="button-secondary">
+                        Submit a property
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- LANDLORD INFORMATION -->
+    <section class="directory-landlord">
+        <div class="container directory-landlord-inner">
+
+            <div>
+                <span class="section-kicker">OWN A RENTAL PROPERTY?</span>
+                <h2>Let someone find their next home.</h2>
+                <p>
+                    Submit your room, flat or house for consideration
+                    on Kgotlello Accommodation Connect.
+                </p>
+            </div>
+
+            <a href="list-property.html" class="landlord-button">
+                List your property <span>→</span>
+            </a>
+
+        </div>
+    </section>
+
+</main>
+
+
+<footer class="site-footer">
+
+    <div class="container footer-main">
+
+        <div class="footer-brand">
+            <a href="index.html" class="brand footer-logo">
+                <span class="brand-mark">K</span>
+                <span class="brand-name">
+                    <strong>KGOTLELLO</strong>
+                    <small>ACCOMMODATION CONNECT</small>
+                </span>
+            </a>
+
+            <p>
+                Connecting people with accommodation
+                opportunities around Mahikeng.
+            </p>
+        </div>
+
+        <div class="footer-links">
+            <h3>Explore</h3>
+            <a href="accommodation.html">Find accommodation</a>
+            <a href="list-property.html">List your property</a>
+            <a href="how-it-works.html">How it works</a>
+        </div>
+
+        <div class="footer-links">
+            <h3>Information</h3>
+            <a href="about.html">About us</a>
+            <a href="contact.html">Contact us</a>
+            <a href="privacy.html">Privacy policy</a>
+            <a href="terms.html">Terms and conditions</a>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <div class="container">
+            <p>
+                © <span id="currentYear"></span>
+                Kgotlello Accommodation Connect. All rights reserved.
+            </p>
+            <span>Made for Mahikeng.</span>
+        </div>
+    </div>
+
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="assets/js/supabase.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/accommodation.js"></script>
+
+</body>
+</html>

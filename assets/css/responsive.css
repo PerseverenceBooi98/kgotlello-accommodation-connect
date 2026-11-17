@@ -1,0 +1,230 @@
+
+/* =====================================================
+   KGOTLELLO
+   RESPONSIVE DESIGN
+===================================================== */
+
+@media (max-width: 1000px) {
+
+    .main-nav {
+        gap: 15px;
+    }
+
+    .main-nav a {
+        font-size: 12px;
+    }
+
+    .hero-container {
+        gap: 30px;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+    }
+}
+
+
+@media (max-width: 760px) {
+
+    .container {
+        width: min(100% - 32px, var(--container));
+    }
+
+    /* HEADER */
+
+    .header-inner {
+        min-height: 70px;
+    }
+
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        padding: 8px;
+    }
+
+    .menu-toggle span {
+        width: 23px;
+        height: 2px;
+        background: var(--green);
+        border-radius: 5px;
+    }
+
+    .main-nav {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: var(--white);
+        border-top: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+        padding: 18px 22px 22px;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        box-shadow: var(--shadow);
+    }
+
+    .main-nav.open {
+        display: flex;
+    }
+
+    .main-nav a {
+        padding: 12px 4px;
+        font-size: 13px;
+    }
+
+    .main-nav .nav-landlord {
+        text-align: center;
+        margin-top: 10px;
+        padding: 12px;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        padding: 48px 0 40px;
+    }
+
+    .hero-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+        letter-spacing: -1.5px;
+    }
+
+    .hero-content > p {
+        font-size: 13px;
+        max-width: 500px;
+    }
+
+    .search-panel {
+        padding: 22px;
+    }
+
+
+    /* INTRO */
+
+    .intro-section {
+        padding: 36px 0;
+    }
+
+    .intro-inner {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .intro-inner h2 {
+        font-size: 23px;
+    }
+
+
+    /* BENEFITS */
+
+    .benefits-grid {
+        grid-template-columns: 1fr;
+        gap: 21px;
+    }
+
+
+    /* FEATURED */
+
+    .featured-section {
+        padding: 45px 0;
+    }
+
+    .section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 13px;
+    }
+
+    .section-heading h2 {
+        font-size: 22px;
+    }
+
+
+    /* LANDLORD */
+
+    .landlord-inner {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .landlord-inner h2 {
+        font-size: 21px;
+    }
+
+
+    /* HOW IT WORKS */
+
+    .how-section {
+        padding: 45px 0;
+    }
+
+    .steps-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* FOOTER */
+
+    .footer-main {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        padding-top: 35px;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+
+    .footer-bottom .container {
+        padding-top: 13px;
+        padding-bottom: 13px;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+
+
+@media (max-width: 400px) {
+
+    .brand-name strong {
+        font-size: 14px;
+    }
+
+    .brand-name small {
+        font-size: 8px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .search-panel {
+        padding: 18px;
+    }
+
+    .search-heading h2 {
+        font-size: 19px;
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-brand {
+        grid-column: auto;
+    }
+}
